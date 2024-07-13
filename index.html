@@ -5,50 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
-    <div>
-        <img class="logo" src="img/gumnami.jpg" alt="align box" width="100" height="100">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const mytext = document.querySelector('h1');
+            let interval;
+
+            mytext.addEventListener('mouseenter', function() {
+                clearInterval(interval); // Clear any existing interval
+
+                // Reset text to original value
+                mytext.innerText = mytext.dataset.value;
+
+                let iteration = 0;
+                interval = setInterval(() => {
+                    mytext.innerText = mytext.innerText.split("")
+                        .map((letter, index) => {
+                            if (index < iteration) {
+                                return mytext.dataset.value[index];
+                            }
+                            return letters[Math.floor(Math.random() * 26)];
+                        })
+                        .join("");
+                    if (iteration >= mytext.dataset.value.length) {
+                        clearInterval(interval);
+                    }
+                    iteration += 1 / 3;
+                }, 30);
+            });
+        });
+    </script>
+    <div class="navbar">
+        <img src="./img/photo.png">
         <nav>
-            <ul>
-                <li>
-                    <a href="blogs.html">blogs</a>
-                </li>
-                <li>
-                    <a href="index.html">education</a>
-                </li>
-                <li>
-                    <a href="index.html">about</a>
-                </li>
-                <li>
-                    <a href="index.html">home</a>
-                </li>
-            </ul>
+            <a href="./index.html">Home</a>
+            <a href="./blogs.html">Blogs</a>
+            <a href="./project.html">Projects</a>
         </nav>
     </div>
-
-    <div>
-        <h1>Intro</h1><br>
-        <p align="center">
-        Hello! I am Pankaj Barman. <br>
-        Computer Science & Engineering department student of Jalpaiguri Government Engineering College, <br>
-        Cyber Security & Ethical Hacking is my field of interest , I'm also learning Web-dev to clearify the  <br>
-        web fundamental.</p>
-        <img class="profile" src="img/oie_hvkLfDM1jlsm.jpg" alt="align box" width="400" height="500">
-        &nbsp; Gumn4m1 :~ <br> <br>
-        &nbsp; name:   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pankaj Barman <br> <br>
-        &nbsp; field of interest: &nbsp; &nbsp; &nbsp; &nbsp; Cyber-Security,web-dev <br> <br>
-        &nbsp; skills: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i> Programming Lang: C, Python, Golang<br> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        ii> Os : Kali linux , windows <br> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        iii> front-end: html , css , JS <br> <br>
-        &nbsp; Education: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B.Tech in Computer Science & Engineering <br> <br>
-        &nbsp; College:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Jalpaiguri Govt. Engineering College <br> <br>
-        &nbsp; Hobby: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Painting <br> <br>
-    </div>
-
+    <main>
+        <div class="left">
+             <h1 data-value="Gumn4m1">Gumn4m1</h1><br>
+            <li>Name: <b>Pankaj Barman</b> <br></li>
+            <li>field of interest: <b>Cyber-Security,web-dev</b> <br></li>
+            <li>skills: 
+                <ul>
+                    <li> Programming Lang: <b>C/C++, Python, Golang</li></b>
+                    <li>Os : <b>Kali linux , windows </li></b>
+                    <li> front-end: <b>html , css , JS </li></b>
+                    <li> back-end: <b>Node js, Express jS</li></b>
+                    <li> database: <b>Mongo DB (NoSQL), Maria DB (SQL)<br></b></li>
+                </ul>
+            </li>
+            <li>Stream: <b>B.Tech in Computer Science & Engineering <br> </b></li>
+            <li>College: <b>Jalpaiguri Govt. Engineering College <br> </b></li>
+            <li>Hobby: <b>Painting,Playing Guitar</b> <br> </li>
+        </div>
+        <div class="intro">
+            <h2>Hello! I am Pankaj Barman.</h2><br>
+            <p align="center">
+            Computer Science & Engineering department student of Jalpaiguri Government Engineering College, <br>
+            Cyber Security & Backend development are my fields of interest.  <br>
+        </div>
+    </main>
 </body>
 
 </html>
