@@ -1,9 +1,13 @@
 *{
-    background-color: black;
+    background-color: transparent;
 }
 
 body{
     color: white;
+    min-height: 98vh;
+    display: grid;
+    background-color: black;
+    grid-template-rows: auto 1fr auto;
 }
 
 .intro{
@@ -11,23 +15,24 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: grey;
 }
+
 
 nav{
     width: 70%;
     color: white;
     display: flex;
-    background-color: transparent;
     align-items: center;
     justify-content: space-around;
 }
 
-nav a {
+nav a{
     text-transform: uppercase;
-    text-decoration: none;
-    color: white;
     font-weight: 700;
     font-size: 14px;
+    text-decoration: none;
+    color: white;
     position: relative;
 }
 
@@ -64,14 +69,77 @@ img{
     height: 100px;
 }
 
-.left{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    line-height: 1.6;
-}
 
 ul{
     list-style-type: square;
     list-style-image: linear-gradient(to left,black,white)
+}
+
+.container{
+    border: 1px solid white;
+    justify-content: center;
+    align-items: left;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 20px;
+}
+.left{
+    color: green;
+}
+
+b{
+    color: white;
+}
+
+h1{
+    color: crimson;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+h2{
+    color: white;
+}
+h3{
+    margin: 0;
+}
+h4{
+    margin: 0;
+}
+
+.cmd{
+    line-height: 1;
+    margin: 0;
+    color: red;
+}
+footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around; 
+    height: 15vh;
+    background-image: linear-gradient(to left,#111,black);
+}
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;;
+    line-height: 1.7;
+}
+.foot .blogs,.contact,.social{
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer *{
+    color: grey;
+}
+footer h3{
+    color: white;
 }
