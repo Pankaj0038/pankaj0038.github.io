@@ -53,7 +53,7 @@ nav a:before{
 }
 
 nav a:hover:before{
-width: 100%;    
+    width: 100%;    
 }
 
 
@@ -160,47 +160,47 @@ iframe{
 
 @media(max-width: 998px){
     main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     nav {
-      display: flex;
-      font-family: "Lato", sans-serif;
-      flex-direction: column; 
-      justify-content: left;
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 6rem;
+        display: flex;
+        font-family: "Lato", sans-serif;
+        flex-direction: column; 
+        justify-content: left;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 6rem;
     }
 
     nav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 1rem;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
 
     nav a:hover {
-      color: #f1f1f1;
+        color: #f1f1f1;
     }
 
     nav .closebtn {
-      display: flex;
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
     }
     #lines{
         display: block;
@@ -210,52 +210,52 @@ iframe{
 
 @media(max-width: 768px){
 
-       main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
-    margin-left: 0.8rem;
+    main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20rem;
+            margin-left: 0.8rem;
     }
 
     nav {
-      display: flex;
-      font-family: "Lato", sans-serif;
-      flex-direction: column; 
-      justify-content: left;
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 6rem;
+          display: flex;
+          font-family: "Lato", sans-serif;
+          flex-direction: column; 
+          justify-content: left;
+          height: 100%;
+          width: 0;
+          position: fixed;
+          top: 0;
+          right: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 6rem;
     }
 
     nav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 1rem;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 1rem;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
     }
 
     nav a:hover {
-      color: #f1f1f1;
+        color: #f1f1f1;
     }
 
     nav .closebtn {
-      display: flex;
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
+          display: flex;
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
     #lines{
         display: block;
         margin: 2rem;
