@@ -1,0 +1,88 @@
+*{
+    background-color: transparent;
+}
+body{
+    color: white;
+    min-height: 98vh;
+    display: grid;
+    background-color: black;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav{
+    width: 70%;
+    color: white;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+}
+
+nav a:before{
+    content: "";
+    position: absolute;
+    top:100%;
+    left:0%;
+    width:0%;
+    height: 2px;
+    border-bottom: 2px solid white;
+    transition: all 0.2s linear;
+}
+
+nav a:hover:before{
+width: 100%;    
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to left,#111,black);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 100px;
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around; 
+    height: 15vh;
+    background-image: linear-gradient(to left,#111,black);
+}
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;;
+    line-height: 1.7;
+}
+.foot .blogs,.contact,.social{
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer *{
+    color: grey;
+}
+footer h3{
+    color: white;
+}
