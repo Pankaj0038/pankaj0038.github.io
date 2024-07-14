@@ -40,17 +40,19 @@
     </script>
     <div class="navbar">
         <img src="./img/photo.png">
-        <nav>
+        <nav id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
             <a href="./index.html">Home</a>
             <a href="./blogs.html">Blogs</a>
             <a href="./projects.html">Projects</a>
         </nav>
+        <div id="lines" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</div>
     </div>
     <div class="intro">
             <h2>Hello! I am Pankaj Barman</h2><br>
-            <p align="center">
-            Computer Science & Engineering department student of Jalpaiguri Government Engineering College, <br>
-            welcome to my portfolio website!  <br>
+            <p class="myinfo" align="center">
+            Computer Science & Engineering department student of Jalpaiguri Government Engineering College,</p>
+            <p class="welcome">welcome to my portfolio website! </p> 
     </div>
     <main>
         <div class="left">
@@ -77,17 +79,26 @@
             <div class="container">
                 <p class="cmd">┌──(root㉿kali)<br>└─# </p>
                 <h4>Youtube channel</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KCm7xbhdjyk?si=JykWcoBXDL_6L6Tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/KCm7xbhdjyk?si=JykWcoBXDL_6L6Tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
     <footer>
         <div class="foot">
             <div class="Links">
                 <div class="blogs">
-                    <h3>Blogs and vlogs</h3>
+                    <h3>Blogs</h3>
                     <a href="https://medium.com/@Gumn4m1"><ion-icon name="logo-medium"></ion-icon>  Medium</a>
                     <a href="https://youtube.com/@gumn4m1?si=6Wd-IEl4JUOLhPBc"><ion-icon name="logo-youtube"></ion-icon>  YouTube</a>
                 </div>
