@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gumnami | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/photo.png">
+</head>
+<body>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const mytext = document.querySelector('h1');
+            let interval;
+
+            mytext.addEventListener('mouseenter', function() {
+                clearInterval(interval); // Clear any existing interval
+
+                // Reset text to original value
+                mytext.innerText = mytext.dataset.value;
+
+                let iteration = 0;
+                interval = setInterval(() => {
+                    mytext.innerText = mytext.innerText.split("")
+                        .map((letter, index) => {
+                            if (index < iteration) {
+                                return mytext.dataset.value[index];
+                            }
+                            return letters[Math.floor(Math.random() * 26)];
+                        })
+                        .join("");
+                    if (iteration >= mytext.dataset.value.length) {
+                        clearInterval(interval);
+                    }
+                    iteration += 1 / 3;
+                }, 30);
+            });
+        });
+    </script>
+    <div class="navbar">
+        <img src="./img/photo.png">
+        <nav id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Home</a>
+            <a href="./blogs.html">Blogs</a>
+            <a href="./projects.html">Projects</a>
+        </nav>
+        <div id="lines" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</div>
+    </div>
+    <div class="intro">
+            <h2>Hello! I am Pankaj Barman</h2><br>
+            <p class="myinfo" align="center">
+            Computer Science & Engineering department student of Jalpaiguri Government Engineering College,</p>
+            <p class="welcome">welcome to my portfolio website! </p> 
+    </div>
+    <main>
+        <div class="left">
+            <div class="container">
+                <p class="cmd">┌──(root㉿kali)<br>└─# </p>
+                 <h1 data-value="whoami">whoami</h1><br>
+                <li>Name: <b>Pankaj Barman</b> <br></li>
+                <li>field of interest: <b>Cyber-Security,web-dev</b> <br></li>
+                <li>skills: 
+                    <ul>
+                        <li> Programming Lang: <b>C/C++, Python, Golang</li></b>
+                        <li>Os : <b>Kali linux , windows </li></b>
+                        <li> front-end: <b>html , css , JS </li></b>
+                        <li> back-end: <b>Node js, Express jS</li></b>
+                        <li> database: <b>Mongo DB (NoSQL), Maria DB (SQL)<br></b></li>
+                    </ul>
+                </li>
+                <li>Stream: <b>B.Tech in Computer Science & Engineering <br> </b></li>
+                <li>College: <b>Jalpaiguri Govt. Engineering College <br> </b></li>
+                <li>Hobby: <b>Painting,Playing Guitar</b> <br> </li>
+            </div>
+        </div>
+        <div class="right">
+            <div class="container">
+                <p class="cmd">┌──(root㉿kali)<br>└─# </p>
+                <h4>Youtube channel</h4>
+                <iframe src="https://www.youtube.com/embed/KCm7xbhdjyk?si=JykWcoBXDL_6L6Tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <footer>
+        <div class="foot">
+            <div class="Links">
+                <div class="blogs">
+                    <h3>Blogs</h3>
+                    <a href="https://medium.com/@Gumn4m1"><ion-icon name="logo-medium"></ion-icon>  Medium</a>
+                    <a href="https://youtube.com/@gumn4m1?si=6Wd-IEl4JUOLhPBc"><ion-icon name="logo-youtube"></ion-icon>  YouTube</a>
+                </div>
+            </div>
+            <div class="address">
+                <h3>Address</h3>
+                <address>
+                    Siliguri,West Bengal<br>
+                    Pin-734012,India
+                </address>
+            </div>
+            <div class="social">
+                <h3>Social Media</h3>
+                <a href="#">Facebook</a>
+                <a href="#">instagram</a>
+            </div>
+            <div class="contact">
+                <h3>Contact Me</h3>
+                        <a href="mailto:pankajbarman269@gmail.com"><ion-icon name="mail-outline"></ion-icon>  pankajbarman269@gmail.com</a>
+                        <a href="tel:+918101480752"><ion-icon name="call-outline"></ion-icon>  +91 8101480752</a>
+            </div>
+        </div>
+        <span class="bottom">Gumn4m1 4rt1st</span>
+    </footer>
+</body>
+
+</html>
