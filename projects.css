@@ -57,6 +57,21 @@ main{
     align-items: center;
     text-align: center;
 }
+main div{
+    border: 0.1rem solid white;
+    justify-content: center;
+    align-items: left;
+    border-radius: 1rem;
+    background-color: black;
+    height: 15rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    line-height: 1.6;
+    padding: 2rem;
+    margin: 2rem;
+}
 
 img{
     height: 100px;
